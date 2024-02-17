@@ -92,7 +92,7 @@ class Desolate(Interface):
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
 The remote charges quickly. You are off to your next destination! """)
-        Cowboy.story()
+
 
     def aloe_vera_poison(self):
         print("""The plant you thought was aloe vera turned out to be Aloe ruspoliana.
