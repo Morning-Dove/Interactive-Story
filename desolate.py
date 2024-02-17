@@ -35,7 +35,7 @@ class Desolate(Interface):
             self.injury()
         elif choice  == "2":
             print(desolate_decisions.decisions["decision5"])
-            self.survival()
+            pass
         elif choice == "3":
             self.display_options()
         else:
@@ -74,24 +74,35 @@ class Desolate(Interface):
             self.wrong_choice() 
 
     def survival(self):
+        print()
         print(desolate_decisions.decisions["decision8"])
-        choices = [""] 
+        choices = ["Continue pushing to the charge station?", "Take a small break?"] 
         print()
         choice = self.display_options(choices)
         if choice == "1":
             self.next_era()
         elif choice  == "2":
-            pass
+            self.aloe_vera_poison()
         else:
             self.stored_state.append(self.survival)
             self.wrong_choice()
 
     def next_era(self):
-        pass
+        print("""You have made it to the charging port. 
+You plug-in the remote to start charging.
+You are not totally sure of where you are going next.
+The remote charges quickly. You are off to your next destination! """)
+        Cowboy.story()
+
+    def aloe_vera_poison(self):
+        print("""The plant you thought was aloe vera turned out to be Aloe ruspoliana.
+A poisonous plant that looks similar to Aloe vera. 
+You start to become extremely ill while preparing a fire and waiting for your water to boil. 
+You pass out. When you wake up...""")
+        self.player_dies()
 
     def player_dies(self):
-        print("""You chose to stop and make camp for the night. 
-Your remote battery ends up dying. 
+        print("""Your remote battery ends up dying. 
 You aren't fully sure of where to go from here.
 You succumb to your injurys and lack of food and water.
 You Die. May peace be with you.

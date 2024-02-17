@@ -52,7 +52,17 @@ You are now about 1 days walk away from the charging port.
 Do you walk through the night to the charging port? or Do you stop and make camp for one more night? 
 The remote battery is: """,
 
-    "decision8" : """ """
+    "decision8" : """You continue walking through the night. Luckily it is a full moon and clear skies.
+It has made it much easier to see where you are going. 
+You find an aloe vera plant growing and rub it all over your burns helping to soothe your skin.
+A small stream of water was close to the aloe vera plant. 
+You collect some water, but wait to drink any of it since it needs to be purified.
+You are feeling much better now. You are mostly tired and ready to drink some water.
+
+Do you continue pushing to the charging station? 
+                        or 
+Do you stop for a small break to build a fire and purify your water""",
+
 
 
 }
