@@ -1,10 +1,7 @@
 from future import Vault
 from desolate import Desolate
 
-class Interface():
-
-    def __innit__(self, ):
-        pass
+class Main:
 
     def map():
         print("You project a holographic \
@@ -14,10 +11,12 @@ class Interface():
     of the maze of vents you need to go \
     Left, Right, Right, Left, Straight")
         
-    
+def main():
+    Main.map()
+    Vault.turn_left()
+    Desolate.lonely()    
    
-Vault.turn_left()
 
-map()
-    
-Desolate()
+
+if __name__ == "__main__":
+    main()

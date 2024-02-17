@@ -1,4 +1,4 @@
-from fractions import Fraction
+
 import sys
 
 
@@ -6,8 +6,17 @@ class Interface():
 
     def __init__(self):
         self.inventory = []
-        self.remote_battery = 4.0
+        self.remote_battery = 2
         self.water = 0
+        self.stored_state = []
+
+    def remote_battery_percentage(self):
+        if self.remote_battery >= 0:
+            print(f"Your remote battery is dead. You are on your own to find the next charging port. ")
+        else:
+            percentage = int((self.remote_battery/8)*100)
+            return percentage
+       
   
     def add_to_inventory(self, item):
         self.inventory.append(item)
@@ -16,9 +25,10 @@ class Interface():
     def check_inventory(self):
         print()
         print(f"""Your inventory is currently:
-Inventory: {self.inventory},
-Battery: {Fraction(self.remote_battery/8)},
-Water: {self.water}""")
+            
+Inventory:  {self.inventory}
+Battery:    {self.remote_battery_percentage()}%
+Water:      {self.water}% """)
         print()
         
     def display_options(self, list_options: list):
@@ -37,6 +47,21 @@ Water: {self.water}""")
                 print("Well... it's your loss. ")
                 sys.exit(0)
             return choice
+        
+    def current_method(self):
+        self.stored_state.append()
+      
+    def previous_method(self):
+        previous_method = self.stored_state.pop()
+        previous_method()
+
+    def wrong_choice(self):
+        self.remote_battery -= 1
+        print()
+        print(f"""You have made the wrong choice and ended up in a precarious situation. 
+Your remote is down to {self.remote_battery_percentage()}%. Try Again...
+                """)
+        self.previous_method()
 
 
     def map():
