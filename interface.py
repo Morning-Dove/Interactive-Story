@@ -1,4 +1,3 @@
-
 import sys
 
 
@@ -11,7 +10,7 @@ class Interface():
         self.stored_state = []
 
     def remote_battery_percentage(self):
-        if self.remote_battery >= 0:
+        if self.remote_battery >= 0 or self.remote_battery == None:
             print(f"Your remote battery is dead. You are on your own to find the next charging port. ")
         else:
             percentage = int((self.remote_battery/8)*100)
