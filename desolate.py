@@ -1,12 +1,17 @@
-from fractions import Fraction
+
 from interface import Interface
 import desolate_decisions
 
 
 class Desolate(Interface):
+
   
     def lonely(self):
-        choices  = ["Do you want to make camp for the night?", "Continue walking to the charging port?"]
+        print()
+        print(desolate_decisions.decisions["decision1"])
+        print()
+        print(desolate_decisions.decisions["decision2"])
+        choices  = ["Make camp for the night?", "Continue walking?"]
         print()
         choice = self.display_options(choices)
         if choice == "1":
@@ -14,13 +19,14 @@ class Desolate(Interface):
         elif choice  == "2":
             self.keep_walking()
         else:
+            self.stored_state.append(self.lonely)
             self.wrong_choice()
     
     
     def make_camp(self):
         print(desolate_decisions.decisions["decision3"])
         print()
-        choices = ["Do you make a fire for the night?", "Do you enjoy seeing how bright all the stars are?"]
+        choices = ["Fire for the night?", "See how bright all the stars are?"]
         choice = self.display_options(choices)
         if choice  == "1":
             print(desolate_decisions.decisions["decision4"])
@@ -31,20 +37,13 @@ class Desolate(Interface):
         elif choice == "3":
             self.display_options()
         else:
+            self.stored_state.append(self.make_camp)
             self.wrong_choice()
 
 
     def keep_walking(self):
-        self.remote_battery -= 2
+        self.remote_battery -= 1
         print(desolate_decisions.decisions["decision6"])
-        self.survival()
-
-
-    def wrong_choice(self):
-        self.remote_battery -= 3
-        print(f"""You have made the wrong choice and ended up in a precarious situation. 
-Your remote is down to {Fraction(self.remote_battery/8)}.
-                """)
         self.survival()
         
 
@@ -53,12 +52,8 @@ Your remote is down to {Fraction(self.remote_battery/8)}.
 
 
     def survival(self):
-        print(f"""
-Your water level is at {self.water}.
-Do you have a tool? {self.inventory}. 
-Your remote battery is at {Fraction(self.remote_battery/8)}.
-                """)
-        choices = ["Do you go out looking for supplies? ", "Do you continue on your journey of following the map to find a charging port? "]
+        print()
+        choices = ["Go out looking for supplies? ", "Continue on your journey to find a charging port? "]
         print()
         choice = self.display_options(choices)
         if choice == "1":
@@ -66,21 +61,10 @@ Your remote battery is at {Fraction(self.remote_battery/8)}.
         elif choice  == "2":
             self.keep_walking()
         else:
+            self.stored_state.append(self.survival)
             self.wrong_choice()
 
 
-def main():
-        
-        desolate = Desolate()
-        print()
-        print(desolate_decisions.decisions["decision1"])
-        print()
-        print(desolate_decisions.decisions["decision2"])
-        desolate.lonely()
+desolate = Desolate()
 
-
-      
-
-
-if __name__ == "__main__":
-    main()
+desolate.lonely()
