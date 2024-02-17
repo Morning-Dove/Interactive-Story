@@ -40,6 +40,7 @@ Water:      {self.water}% """)
                 print(f"{i+1}. {list_options[i]}")
             print()
             choice = input("Enter your choice: ").lower()
+            print()
             if choice == str(len(list_options) - 1):
                 self.check_inventory()
                 continue
@@ -63,12 +64,4 @@ Your remote is down to {self.remote_battery_percentage()}%. Try Again...
                 """)
         self.previous_method()
 
-
-    def map():
-        print("You project a holographic \
-    map of the vent sytem of the \
-    compound surrounding the vault")
-        print("From the beginning \
-    of the maze of vents you need to go \
-    Left, Right, Right, Left, Straight")
         
