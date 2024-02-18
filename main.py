@@ -1,5 +1,5 @@
 from interface import Interface
-from future import Vault
+#from future import Vault
 from desolate import Desolate
 from cowboy import Cowboy
 
@@ -7,9 +7,17 @@ from cowboy import Cowboy
 class Main(Interface):
 
     def __init__(self):
-        self.vault = Vault()
+        #self.vault = Vault()
         self.desolate = Desolate()
         self.cowboy = Cowboy()
+
+    def inbetween_worlds(self):
+        print()
+        print("""As you travel to a new world you loose eveything that you collected in the previous world.
+Good Luck in this new place. May the odds be everin your favor.
+              """)
+        self.inventory = []
+        self.remote_battery = 2
 
         
     def run(self):
@@ -19,10 +27,11 @@ class Main(Interface):
         print("""From the beginning 
     of the maze of vents you need to go
     Left, Right, Right, Left, Straight""")
-        self.vault.navigate_vents()
+        #self.vault.navigate_vents()
         self.desolate.arrived()
+        self.inbetween_worlds()
         self.cowboy.story()
-    #Add Wizard.py
+        #Add Wizard.py
        
    
 

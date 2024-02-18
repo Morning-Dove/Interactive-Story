@@ -6,20 +6,15 @@ class Interface():
     def __init__(self):
         self.inventory = []
         self.remote_battery = 2
-        self.water = 0
         self.stored_state = []
 
     def remote_battery_percentage(self):
-        if self.remote_battery >= 0 or self.remote_battery == None:
-            print(f"Your remote battery is dead. You are on your own to find the next charging port. ")
-        else:
-            percentage = int((self.remote_battery/8)*100)
-            return percentage
+        return int((self.remote_battery/8)*100)
        
   
     def add_to_inventory(self, item):
-        self.inventory.append(item)
-        print(f"You added {item.__class__.__name__} to your inventory. ")
+        return {self.inventory.append(item)}
+    
 
     def check_inventory(self):
         print()
@@ -27,7 +22,7 @@ class Interface():
             
 Inventory:  {self.inventory}
 Battery:    {self.remote_battery_percentage()}%
-Water:      {self.water}% """)
+            """)
         print()
         
     def display_options(self, list_options: list):
