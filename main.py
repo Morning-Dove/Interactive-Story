@@ -11,13 +11,6 @@ class Main(Interface):
         self.desolate = Desolate()
         self.cowboy = Cowboy()
 
-    def map():
-        print("You project a holographic \
-    map of the vent sytem of the \
-    compound surrounding the vault")
-        print("From the beginning \
-    of the maze of vents you need to go \
-    Left, Right, Right, Left, Straight")
         
     def run(self):
         print("""You project a holographic
