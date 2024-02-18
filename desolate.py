@@ -1,4 +1,3 @@
-
 import sys
 from interface import Interface
 import desolate_decisions
@@ -35,12 +34,56 @@ class Desolate(Interface):
             self.injury()
         elif choice  == "2":
             print(desolate_decisions.decisions["decision5"])
-            pass
-        elif choice == "3":
-            self.display_options()
+            self.continue_journey()
+
         else:
             self.stored_state.append(self.make_camp)
             self.wrong_choice()
+
+    def continue_journey(self):
+        print()
+        print(desolate_decisions.decisions["decision9"])
+        print()
+        choices = ["Travel at night? ", "Move slowly and take more breaks? "]
+        choice = self.display_options(choices)
+        if choice  == "1":
+            print(desolate_decisions.decisions["decision10"])
+            self.keep_the_kinfe()
+        elif choice  == "2":
+            print(desolate_decisions.decisions["decision11"])
+            self.player_dies()
+        else:
+            self.stored_state.append(self.continue_journey)
+            self.wrong_choice()
+
+    def keep_the_kinfe(self):
+        print()
+        print(desolate_decisions.decisions["decision12"])
+        print()
+        choices = ["Hope you don't run into anyone? ", "Make a plan? "]
+        choice = self.display_options(choices)
+        if choice  == "1":
+            print(desolate_decisions.decisions["decision13"])
+            self.inventory.append("knife")
+            self.finish_the_journey()
+        elif choice  == "2":
+            print(desolate_decisions.decisions["decision14"])
+            self.inventory.append("knife")
+            pass
+        else:
+            self.stored_state.append(self.continue_journey)
+            self.wrong_choice()
+
+    def finish_the_journey(self):
+        print("""As soon as the sun was low enough in the sky for it to begin cooling off, you begin following the map to the charging port.
+You ran like you have never run before. You are on a mission to get out of here.""")
+        self.next_era()
+
+    def overthinking(self):
+        print("""Your theory was correct. You overthink everything. 
+Once it is cool enough to start moving agian, you stay in your head thinking about all the what if scenarios and pay no attention to where you are at.
+You fall into a gully carved out by torrential down pours of rain. When you fall into the gully you break your leg.""")
+        self.player_dies()
 
 
     def keep_walking(self):
@@ -51,11 +94,13 @@ class Desolate(Interface):
         print()
         choice = self.display_options(choices)
         if choice == "1":
-            pass
+            print(desolate_decisions.decisions["decision15"])
+            self.player_dies()
         elif choice  == "2":
-            pass
+            print(desolate_decisions.decisions["decision16"])
+            self.next_era()
         else:
-            self.stored_state.append(self.survival)
+            self.stored_state.append(self.keep_walking)
             self.wrong_choice() 
 
     def injury(self):
@@ -70,7 +115,7 @@ class Desolate(Interface):
         elif choice  == "2":
             self.player_dies()
         else:
-            self.stored_state.append(self.survival)
+            self.stored_state.append(self.injury)
             self.wrong_choice() 
 
     def survival(self):
@@ -92,7 +137,7 @@ class Desolate(Interface):
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
 The remote charges quickly. You are off to your next destination! """)
-
+        
 
     def aloe_vera_poison(self):
         print("""The plant you thought was aloe vera turned out to be Aloe ruspoliana.
@@ -100,6 +145,7 @@ A poisonous plant that looks similar to Aloe vera.
 You start to become extremely ill while preparing a fire and waiting for your water to boil. 
 You pass out. When you wake up...""")
         self.player_dies()
+
 
     def player_dies(self):
         print("""Your remote battery ends up dying. 

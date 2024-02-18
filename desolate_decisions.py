@@ -40,7 +40,7 @@ The remote GPS is pointing you towards the mountain. You begin making the danger
 You are grateful there is a full moon tonight and you are able to walk in the brightly lit starry night sky. 
 Since you had to light the remote up so many times you notice the battery is draining faster than you expected.
 
-Do you go out looking for supplies? ", "Do you continue on your journey of following the map to find a charging port?
+Do you go out looking for supplies? or Do you continue on your journey of following the map to find a charging port?
 
 By early morning the remote battery is down: """,
 
@@ -61,8 +61,55 @@ You are feeling much better now. You are mostly tired and ready to drink some wa
 
 Do you continue pushing to the charging station? 
                         or 
-Do you stop for a small break to build a fire and purify your water""",
+Do you stop for a small break to build a fire and purify your water?
+                        """,
 
+        "decision9" : """You need to find water and make it to the charging station. 
+It is incredibly hot in the middle of the day. There is not much left in this barren wasteland of sand,
+a few small shrubs, and big rocky mountains. Your first priority is to make it to the charging station. 
+You believe that you might be able to make it without water, just long enough to get to the charging port,
+as long as you play it smart.
+         
+Do you begin only travelling at night? 
+                or  
+Do you move slowly, take more breaks, 
+and just keep pushing to get to the charging port before the remote dies?
+                        """,
 
+        "decision10" : """You decide to only travel at night. 
+Once it is time for the sun to rise you will find somewhere to escape the sun for most of the day.
+While resting in the shade you find some shiny metal tucked under a rock. 
+You find a knife with the initials B.N.
+You think to yourself there is no way there is anyone else left alive in this desolate land. 
+You know that there may come a time when you need this knife, but are concerned as you do not want to take what is not yours.
+                        """,
 
+        "decision11" : """You realize very quickly that you are becoming far to dehydrated.
+There are to few places to escape the sun when trying to travel mid-day. 
+You decide to rest under a small shrub that provides very little shade but, 
+it helps break up the sun to provide some relief. You fall asleep from being to hot.
+You wake up unsure of how long you have been out.
+                        """,
+
+        "decision12" : """Do you keep the knife and hope you don't run into anyone else while your out here?
+                                        or
+Do you keep the knife and come up with a plan for in case you run into someone?    
+                            """,
+
+        "decision13" : """You kept the knife. You decide this evening you will move quicker than what you have been.
+You want to make sure you can make it to the charging port without any distruptions and make it out of here alive.
+                            """,
+
+        "decision14" : """You kept the knife and now are contemplating every life decision that got you here. 
+You begin to overthink everything. You are worried you won't make it to the charging port in time. 
+                            """,
+
+        "decision15" : """You went out looking for supplies. 
+You get lost and end up an extra day worth of travel away from the charging port. 
+                        """,
+
+        "decision16" : """You continued your journey to the charging port. 
+You make it just in time before the battery dies and you would have been stuck in this desolate wasteland.
+You are giddy with excitement!
+                        """,
 }
