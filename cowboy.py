@@ -18,6 +18,7 @@ class Cowboy(Interface):
             print(cowboy_decisions.decisions["decision3"])
             self.do_not_shoot()
         else:
+            self.stored_state.append(self.story)
             self.wrong_choice()
 
 
@@ -34,6 +35,7 @@ class Cowboy(Interface):
             print(cowboy_decisions.decisions["decision6"])
             self.the_end()
         else:
+            self.stored_state.append(self.blend_in)
             self.wrong_choice()
 
 
@@ -50,6 +52,7 @@ class Cowboy(Interface):
             print(cowboy_decisions.decisions["decision9"])
             self.the_end()
         else:
+            self.stored_state.append(self.become_the_bartender)
             self.wrong_choice()
 
     def break_in(self):
@@ -65,6 +68,7 @@ class Cowboy(Interface):
             print(cowboy_decisions.decisions["decision12"])
             self.the_end()
         else:
+            self.stored_state.append(self.break_in)
             self.wrong_choice()
 
     def to_the_vault(self):
@@ -80,6 +84,7 @@ class Cowboy(Interface):
             print(cowboy_decisions.decisions["decision15"])
             self.fully_charged()
         else:
+            self.stored_state.append(self.break_in)
             self.wrong_choice() 
  
 
@@ -96,6 +101,7 @@ class Cowboy(Interface):
             print(cowboy_decisions.decisions["decision18"])
             self.fully_charged()
         else:
+            self.stored_state.append(self.do_not_shoot)
             self.wrong_choice() 
 
     def fully_charged(self):
