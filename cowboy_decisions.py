@@ -1,12 +1,14 @@
 decisions = {
 
     #Goes to decision2 & decision3
-    "decision1" : """You quickly find yourself in another world. You hear shots being fired left and right.
-You hear bullets whizzing by your head. You duck behind the counter, hoping no one noticed you popping up out of no where.
+    "decision1" : """You quickly find yourself in another world. 
+You hear shots being fired left and right.
+You hear bullets whizzing by your head. You duck behind the counter, 
+hoping no one noticed you popping up out of no where.
 You see a man passed out behind the counter presumably from drinking.
 
 Do you steal his clothes to blend in with everyone else? 
-                            or 
+                        or 
 Do you jump out from behind the counter and yell DON'T SHOOT!!!""",
 
     #Goes to decision4
@@ -15,15 +17,16 @@ You need to quietly and quickly find the charging port. You haven't seen guns in
 You decide you do not want to stay here long. You check the map to find out how far a charging port is.""",
 
     #Goes to decision16
-    "decision3" : """Do you jump out from behind the counter and yell DON'T SHOOT!!!""",
+    "decision3" : """You jumped out from behind the counter yelling don't shoot. What do you think is going to happen? There is a shoot out and you yell. 
+You have officially brought your voice to a gun fight. No one knows who you are in this small owboy town. So they all turn on you.""",
     
     #Goes to decision5 & decision6
     "decision4" : """You are in luck there is a charging port not far from here. It is only about a days walk from here.
 You begin to casually walk out from behind the bar. When someone tells you to stop and get them a drink. 
 You realize they think you are the bartender.
 
-Do you stop and get them a drink?
-            or
+        Do you stop and get them a drink?
+                    or
 Do you tell them you just quit your job and keep walking out?
                 """,
 
@@ -61,7 +64,7 @@ After walking by you realize it is a bank and the charging port is in the vault.
 
 Do you convince your new friends to help you break into the vault?
                             or
-Do you figure out how to do it alone?
+            Do you figure out how to do it alone?
                     """,
 
     #Goes to decision13
@@ -85,8 +88,8 @@ You find a window that is open. When you crawl through the window. You see red l
 You think to yourself how advanced this is compared to everything else in this cowboy town. Another one of your saloon buddy's crawls through the window.
 They let you know they have the code to disarm the alarm. The hop over a few lasers and make it to the alarm screen. They disarm the alarm and the red lasers diappear.
 
-Do you let everyone else in behind you?
-                    or
+                Do you let everyone else in behind you?
+                                    or
 Do you quickly lock the window behind you and go straight for the charging port?
                     """,
 
@@ -98,17 +101,13 @@ Do you quickly lock the window behind you and go straight for the charging port?
                     """,
 
     #Goes to decision17 &decision18
-    "decision16" : """You jumped out from behind the counter yelling don't shoot. What do you think is going to happen? There is a shoot out and you yell. 
-You have officially brought your voice to a gun fight. No one knows who you are in this small owboy town. So they all turn on you.
-
-Do you think you will survive to tell the tale?
-                        or
-Will this be the end?
-                """,
+    "decision16" : """Do you think you will survive to tell the tale? or Will this be the end?
+                    """,
 
     #the_end()
     "decision17" : """You think you will survive to tell the tale. Joke is on you. Everyone in the saloon turned on you. 
-There is now way you will be making it our of here. """,
+There is no way you will be making it out of here. 
+                    """,
 
     #fully_charged()
     "decision18" : """You think this will be the end? Well you are in luck. Everyone turns out to be really nice. 
@@ -117,5 +116,5 @@ You check your map and explain to everyone that you are a world traveller and ne
 Oddly enough everyone knows exactly what you are talking about. They have previously had other worldly travellers. 
 They explain how the other travelers are the ones that installed this charging port. They take you dirrectly to it.
 You thank them for being so helpful and tell them you will see them again next time!
-                """
+                    """
 }

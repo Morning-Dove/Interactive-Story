@@ -3,7 +3,6 @@ from interface import Interface
 import cowboy_decisions
 
 
-
 class Cowboy(Interface):
 
     def story(self):
@@ -103,7 +102,10 @@ class Cowboy(Interface):
         print("""You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
-The remote charges quickly. You are off to your next destination!""")
+The remote charges quickly. You are off to your next destination!
+              
+________________________________NEW_WORLD________________________________________
+              """)
 
 
     def the_end(self):
