@@ -12,6 +12,7 @@ Find the charging port before the battery dies and you could still make it out o
     #Goes to decision3 & decision6
     "decision2" : """You can see mountains off in the distance. You are currently standing with sand all around you.
 There is a Juniper Berry Bush 50 meters away. You see a tipped over empty fishing boat hull a few meters away from the tree.
+You found some rope when you picked up the boat. You decide to hold on to it just in case you need it later.
 The remote is telling you the charging port will take 2 days of walking to get to. You have a quarter charge worth of battery left.
 Depending on how often the remote is used 1/4 of charge will keep the remote on for two days.
 
@@ -54,7 +55,9 @@ When the sun rises you realize your arm has been seriously burned in the fire.
 You are on the lookout for water and plants that could help soothe your burn.
 You continue following the map on your remote while also checking revines and gullys for water.
 You are now about 1 days walk away from the charging port.
+
 Do you walk through the night to the charging port? or Do you stop and make camp for one more night? 
+
 The remote battery is: """,
 
     #Goes to next_era() & decision17

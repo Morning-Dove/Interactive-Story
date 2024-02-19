@@ -11,14 +11,15 @@ class Desolate(Interface):
         print()
         print(desolate_decisions.decisions["decision2"])
         choices  = ["Make camp for the night?", "Continue walking?"]
+        self.add_to_inventory("rope")
         print()
+        self.stored_state.append(self.arrived)
         choice = self.display_options(choices)
         if choice == "1":
             self.make_camp()
         elif choice  == "2":
             self.keep_walking()
         else:
-            self.current_method(self.arrived)
             self.wrong_choice()
     
     
@@ -130,7 +131,11 @@ class Desolate(Interface):
         print("""You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
-The remote charges quickly. You are off to your next destination! """)
+The remote charges quickly. You are off to your next destination! 
+              
+________________________________NEW_WORLD________________________________________
+                         
+                    """)
 
 
     def player_dies(self):
