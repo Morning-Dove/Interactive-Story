@@ -13,6 +13,7 @@ class Cowboy(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(cowboy_decisions.decisions["decision2"])
+            self.add_to_inventory("random person's clothes")
             self.blend_in()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision3"])
@@ -47,6 +48,7 @@ class Cowboy(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(cowboy_decisions.decisions["decision8"])
+            self.add_to_inventory("new friends")
             self.break_in()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision9"])
