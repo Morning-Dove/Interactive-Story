@@ -9,12 +9,14 @@ class Interface():
         self.stored_state = []
 
     def remote_battery_percentage(self):
-        return int((self.remote_battery/8)*100)
-       
+        remote_battery = int((self.remote_battery/8)*100)   
+        if remote_battery >=0 or remote_battery == None:
+            print("You no longer have any battery left in your remote. You are on your own.")
+            print()
+        return remote_battery
   
     def add_to_inventory(self, item):
         return {self.inventory.append(item)}
-    
 
     def check_inventory(self):
         print()
@@ -42,9 +44,6 @@ Battery:    {self.remote_battery_percentage()}%
                 print("Well... it's your loss. ")
                 sys.exit(0)
             return choice
-        
-    def current_method(self):
-        self.stored_state.append()
       
     def previous_method(self):
         previous_method = self.stored_state.pop()
