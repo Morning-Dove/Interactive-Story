@@ -71,7 +71,7 @@ class Cowboy(Interface):
     def to_the_vault(self):
         print()
         print(cowboy_decisions.decisions["decision13"])
-        choices = [""]
+        choices = ["Let everyone else in behind you?", "Quickly lock the window behind you?"]
         print()
         choice = self.display_options(choices)
         if choice == "1":
@@ -87,7 +87,7 @@ class Cowboy(Interface):
     def do_not_shoot(self):
         print()
         print(cowboy_decisions.decisions["decision16"])
-        choices = [""]
+        choices = ["Will you survive to tell the tale?", "Will this be the end?"]
         print()
         choice = self.display_options(choices)
         if choice == "1":
