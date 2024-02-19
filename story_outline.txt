@@ -1,9 +1,5 @@
 You are the Player/Robber
 
-
-import auto reader
-import sound when remote is used
-
 Dimension hopping **Future.py** *Colby
     * Starts in th future
     * Starts out crawling through vents and lasers
@@ -18,7 +14,7 @@ Dimension hopping **Future.py** *Colby
     * Comes with a GPS function that can point you in the right direction to recharge the remote
     * Makes it to charging facility
     
-    Cowboy Era
+    Cowboy Era *Dove
     * Comes into the era during a shoot out in a saloon
     * Appear behind the counter of saloon 
             * (Make a decision: steal a poncho for a guy passed out or jump out saying don't shoot me)
@@ -35,6 +31,6 @@ Dimension hopping **Future.py** *Colby
     
     * Plot twist you arrived in the circle when the demon arrived so the demon possessed you
 
-    WindDown ***Goes back to main***
+    WindDown ***Goes back to main***  *Dove
     * Starts to understand the remote and can choose where they want to go
     * Chose to continue adventure or Goes back to house in original world 

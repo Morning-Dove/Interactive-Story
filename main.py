@@ -1,33 +1,25 @@
 from interface import Interface
-from future import Vault
+#from future import Vault
+from desolate import Desolate
+from cowboy import Cowboy
+#from wizard import
 
 
 class Main(Interface):
 
-    def map():
-        print("You project a holographic \
-    map of the vent sytem of the \
-    compound surrounding the vault")
-        print("From the beginning \
-    of the maze of vents you need to go \
-    Left, Right, Right, Left, Straight")
-        
-def main():
-    print("""You project a holographic
-map of the vent sytem of the 
-compound surrounding the vault""")
-    print("""From the beginning 
-of the maze of vents you need to go
-Left, Right, Right, Left, Straight""")
-    vault = Vault()
-    vault.navigate_vents()
-
-    #Desolate.arrived()
-    #Cowboy.story() 
-    #Add Wizard.py
+    def __init__(self):
+        #self.vault = Vault()
+        self.desolate = Desolate()
+        self.cowboy = Cowboy()
+        #Add wizard
+               
+    def run(self):
+        #self.vault.navigate_vents()      
+        self.desolate.arrived()
+        self.cowboy.story()
+        #Add Wizard.py
        
-   
-
 
 if __name__ == "__main__":
-    main()
+    main = Main()
+    main.run()
