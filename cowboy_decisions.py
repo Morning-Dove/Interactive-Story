@@ -14,6 +14,7 @@ Do you jump out from behind the counter and yell DON'T SHOOT!!!""",
 You need to quietly and quickly find the charging port. You haven't seen guns in years. They make you a little nervous. 
 You decide you do not want to stay here long. You check the map to find out how far a charging port is.""",
 
+    #Goes to decision16
     "decision3" : """Do you jump out from behind the counter and yell DON'T SHOOT!!!""",
     
     #Goes to decision5 & decision6
@@ -63,14 +64,58 @@ Do you convince your new friends to help you break into the vault?
 Do you figure out how to do it alone?
                     """,
 
+    #Goes to decision13
     "decision11" : """You have made it back to the saloon and begin to tell your new friends how there is something in a lock box in the bank that you need.
 You begin to convince them to help you come up with a plan to break into the bank. As long as they get something out of it too they will help. A plan has been devised.
-You will be breaking into th bank vaul that night.
+You will be breaking into th bank vault that night.
                     """,
 
+    #the_end()
     "decision12" : """You are still nervous about getting to close to anyone in this cowboy town you end up deciding to break into the bank by yourself. 
-You make your plan to break in that night. You try to 
+You make your plan to break in that night.
+
+You make it to the bank. There is no security that you can see. You find an open window into the bank and are able to crawl in from there.
+There are red lasers pointed all over the place. You think to yourself that lasers are rather advanced for everything else that exsists in this cowboy town.
+You crawl back out of the bank defeated. You know there is no way for you to make through all of those lasers alone. 
                     """,
 
+    #Goes to decision14 & decision15
+    "decision13" : """It is now dark out and you are gearing up to break into the bank. Everyone is in their position. 
+You find a window that is open. When you crawl through the window. You see red lasers pointed everywhere. 
+You think to yourself how advanced this is compared to everything else in this cowboy town. Another one of your saloon buddy's crawls through the window.
+They let you know they have the code to disarm the alarm. The hop over a few lasers and make it to the alarm screen. They disarm the alarm and the red lasers diappear.
 
+Do you let everyone else in behind you?
+                    or
+Do you quickly lock the window behind you and go straight for the charging port?
+                    """,
+
+    #fully_charged()
+    "decision14" : """You let everyone else in behind you. You still make a run for the charging port.""",
+
+    #fully_charged()
+    "decision15" : """You quickly lock the window behind you to not let anyone else come in. Your buddy that is in the bank pays no mind to what you are doing. 
+                    """,
+
+    #Goes to decision17 &decision18
+    "decision16" : """You jumped out from behind the counter yelling don't shoot. What do you think is going to happen? There is a shoot out and you yell. 
+You have officially brought your voice to a gun fight. No one knows who you are in this small owboy town. So they all turn on you.
+
+Do you think you will survive to tell the tale?
+                        or
+Will this be the end?
+                """,
+
+    #the_end()
+    "decision17" : """You think you will survive to tell the tale. Joke is on you. Everyone in the saloon turned on you. 
+There is now way you will be making it our of here. """,
+
+    #fully_charged()
+    "decision18" : """You think this will be the end? Well you are in luck. Everyone turns out to be really nice. 
+You are surprised that it went from a shoot out to this! 
+You check your map and explain to everyone that you are a world traveller and need to get into their bank to use the charging port.
+Oddly enough everyone knows exactly what you are talking about. They have previously had other worldly travellers. 
+They explain how the other travelers are the ones that installed this charging port. They take you dirrectly to it.
+You thank them for being so helpful and tell them you will see them again next time!
+                """
 }

@@ -17,7 +17,7 @@ class Cowboy(Interface):
             self.blend_in()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision3"])
-            pass
+            self.do_not_shoot()
         else:
             self.wrong_choice()
 
@@ -61,28 +61,49 @@ class Cowboy(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(cowboy_decisions.decisions["decision11"])
-            self.break_in()
+            self.to_the_vault()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision12"])
             self.the_end()
         else:
             self.wrong_choice()
- 
 
-    def do_not_shoot(self):
+    def to_the_vault(self):
         print()
-        print(cowboy_decisions.decisions["decision"])
+        print(cowboy_decisions.decisions["decision13"])
         choices = [""]
         print()
         choice = self.display_options(choices)
         if choice == "1":
-            print(cowboy_decisions.decisions["decision"])
-            pass
+            print(cowboy_decisions.decisions["decision14"])
+            self.fully_charged()
         elif choice  == "2":
-            print(cowboy_decisions.decisions["decision"])
-            pass
+            print(cowboy_decisions.decisions["decision15"])
+            self.fully_charged()
         else:
             self.wrong_choice() 
+ 
+
+    def do_not_shoot(self):
+        print()
+        print(cowboy_decisions.decisions["decision16"])
+        choices = [""]
+        print()
+        choice = self.display_options(choices)
+        if choice == "1":
+            print(cowboy_decisions.decisions["decision17"])
+            self.the_end()
+        elif choice  == "2":
+            print(cowboy_decisions.decisions["decision18"])
+            self.fully_charged()
+        else:
+            self.wrong_choice() 
+
+    def fully_charged(self):
+        print("""You have made it to the charging port. 
+You plug-in the remote to start charging.
+You are not totally sure of where you are going next.
+The remote charges quickly. You are off to your next destination!""")
 
 
     def the_end(self):
