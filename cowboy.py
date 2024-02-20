@@ -5,6 +5,9 @@ import cowboy_decisions
 
 class Cowboy(Interface):
 
+    init(autoreset=True)
+    KEY = 3579
+
     def story(self):
         print()
         print(cowboy_decisions.decisions["decision1"])
@@ -31,6 +34,7 @@ class Cowboy(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(cowboy_decisions.decisions["decision5"])
+            self.remote_battery -= 1 
             self.become_the_bartender()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision6"])
@@ -38,7 +42,6 @@ class Cowboy(Interface):
         else:
             self.stored_state.append(self.blend_in)
             self.wrong_choice()
-
 
     def become_the_bartender(self):
         print()
@@ -65,6 +68,7 @@ class Cowboy(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(cowboy_decisions.decisions["decision11"])
+            self.code_key()
             self.to_the_vault()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision12"])
@@ -81,14 +85,14 @@ class Cowboy(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(cowboy_decisions.decisions["decision14"])
-            self.fully_charged()
+            self.remote_battery -= 1 
+            self.enter_code()
         elif choice  == "2":
             print(cowboy_decisions.decisions["decision15"])
-            self.fully_charged()
+            self.enter_code()
         else:
             self.stored_state.append(self.break_in)
             self.wrong_choice() 
- 
 
     def do_not_shoot(self):
         print()
@@ -106,8 +110,33 @@ class Cowboy(Interface):
             self.stored_state.append(self.do_not_shoot)
             self.wrong_choice() 
 
+    def code_key(self):
+        if self.remote_battery > 1:
+            print(Fore.LIGHTGREEN_EX + Style.BRIGHT + f"""This is the combination {self.KEY}. 
+Remember this combination it as this is the only time you will see it.""")
+        self.remote_battery == 0
+        print(Fore.RED + Style.BRIGHT + "You do not have enough battery in your remote to view the combination. You will have to guess and hope you get it right.")
+
+    def enter_code(self):
+        tries = 3
+        print()
+        print("It is time to enter your combination. ")
+        for i in range(3):
+            print(f"You have {tries} tries. ")
+            print()
+            if tries == 0:
+                print()
+                print("You have not guessed the combination to get into the vault.")
+                self.the_end()
+            code = int(input("Enter the combination: "))
+            tries -= 1
+            if code == self.KEY:
+                print("You did it!")
+                print()
+                self.fully_charged()
+                break
+
     def fully_charged(self):
-        init(autoreset=True)
         next_world = """You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
@@ -119,8 +148,7 @@ ________________________________NEW_WORLD_______________________________________
 
 
     def the_end(self):
-        print_statement = "You don't make it to the charging port. You never make it out of this world." 
-        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + print_statement)
+        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + "You don't make it to the charging port. You never make it out of this world." )
         sys.exit(0)
 
 cowboy = Cowboy()
