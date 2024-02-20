@@ -10,9 +10,11 @@ class Interface():
 
     def remote_battery_percentage(self):
         remote_battery = int((self.remote_battery/8)*100)   
-        if remote_battery >=0 or remote_battery == None:
+        if remote_battery <= 0 or remote_battery == None:
+            remote_battery = 0
             print("You no longer have any battery left in your remote. You are on your own.")
             print()
+            return remote_battery
         return remote_battery
   
     def add_to_inventory(self, item):
