@@ -16,7 +16,7 @@ You found some rope when you picked up the boat. You decide to hold on to it jus
 The remote is telling you the charging port will take 2 days of walking to get to. You have a quarter charge worth of battery left.
 Depending on how often the remote is used 1/4 of charge will keep the remote on for two days.
 
-Do you want to make camp for the night?, Continue walking to the charging port?""",
+Do you want to make camp for the night? or Continue walking to the charging port?""",
 
     #Goes to decision4 & decision5
     "decision3" : """You have decided to make camp. 

@@ -1,4 +1,5 @@
 import sys
+import time
 
 
 class Interface():
@@ -12,7 +13,7 @@ class Interface():
         remote_battery = int((self.remote_battery/8)*100)   
         if remote_battery <= 0 or remote_battery == None:
             remote_battery = 0
-            print("You no longer have any battery left in your remote. You are on your own.")
+            Interface.print_slow("You no longer have any battery left in your remote. You are on your own.")
             print()
             return remote_battery
         return remote_battery
@@ -22,7 +23,7 @@ class Interface():
 
     def check_inventory(self):
         print()
-        print(f"""Your inventory is currently:
+        Interface.print_slow(f"""Your inventory is currently:
             
 Inventory:  {self.inventory}
 Battery:    {self.remote_battery_percentage()}%
@@ -33,9 +34,10 @@ Battery:    {self.remote_battery_percentage()}%
         list_options += ["Check Inventory", "Quit"]
         while True:
             print()
-            print("Options: ")
+            Interface.print_slow("Options: ")
+            print()
             for i in range(len(list_options)):
-                print(f"{i+1}. {list_options[i]}")
+                Interface.print_slow(f"{i+1}. {list_options[i]}"'\n')
             print()
             choice = input("Enter your choice: ").lower()
             print()
@@ -43,7 +45,7 @@ Battery:    {self.remote_battery_percentage()}%
                 self.check_inventory()
                 continue
             elif choice ==  str(len(list_options)):
-                print("Well... it's your loss. ")
+                Interface.print_slow("Well... it's your loss. ")
                 sys.exit(0)
             return choice
       
@@ -58,5 +60,20 @@ Battery:    {self.remote_battery_percentage()}%
 Your remote is down to {self.remote_battery_percentage()}%. Try Again...
                 """)
         self.previous_method()
+
+    def print_slow_color(text, color_code):
+        for char in text:
+            print(f"\033[{color_code}m{char}\033[0m", end='', flush=True)
+            time.sleep(0.2)
+
+    def print_color(text, color_code):
+        for char in text:
+            print(f"\033[{color_code}m{char}\033[0m", end='', flush=True)
+            time.sleep(0.01)
+            
+    def print_slow(text):
+        for char in text:
+            print(char, end='', flush=True)
+            time.sleep(0.01) 
 
         
