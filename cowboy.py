@@ -1,8 +1,7 @@
 import sys
-from colorama import Fore, Style
+from colorama import Fore, Style, init
 from interface import Interface
 import cowboy_decisions
-
 
 class Cowboy(Interface):
 
@@ -108,7 +107,7 @@ class Cowboy(Interface):
             self.wrong_choice() 
 
     def fully_charged(self):
-
+        init(autoreset=True)
         next_world = """You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
