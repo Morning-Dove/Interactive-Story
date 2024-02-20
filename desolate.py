@@ -6,6 +6,8 @@ import desolate_decisions
 
 class Desolate(Interface):
 
+    init(autoreset=True)
+
     def arrived(self):
         print()
         print(desolate_decisions.decisions["decision1"])
@@ -79,6 +81,8 @@ class Desolate(Interface):
 
     def keep_walking(self):
         self.remote_battery -= 1
+        if self.remote_battery_percentage == 0:
+            self.player_dies()
         print()
         print(desolate_decisions.decisions["decision6"])
         choices = ["Go out looking for supplies? ", "Continue on your journey to find a charging port? "]
@@ -86,6 +90,12 @@ class Desolate(Interface):
         choice = self.display_options(choices)
         if choice == "1":
             print(desolate_decisions.decisions["decision15"])
+            self.add_to_inventory("broken pottery")
+            self.add_to_inventory("fishing line") 
+            print(desolate_decisions.decisions["decision18"])
+            print()
+            print(*self.inventory, sep=", ")
+            print()
             self.player_dies()
         elif choice  == "2":
             print(desolate_decisions.decisions["decision16"])
@@ -97,6 +107,8 @@ class Desolate(Interface):
 
     def injury(self):
         self.remote_battery -= 1
+        if self.remote_battery_percentage == 0:
+            self.player_dies()
         print()
         print(desolate_decisions.decisions["decision7"])
         choices = ["Walk through the night? ", "Stop and make camp? "]
@@ -128,8 +140,7 @@ class Desolate(Interface):
             self.wrong_choice()
 
 
-    def next_era(self):
-        init(autoreset=True)
+    def next_era(self): 
         next_world = """You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.

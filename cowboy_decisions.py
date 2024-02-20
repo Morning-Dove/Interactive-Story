@@ -70,7 +70,8 @@ Do you convince your new friends to help you break into the vault?
     #Goes to decision13
     "decision11" : """You have made it back to the saloon and begin to tell your new friends how there is something in a lock box in the bank that you need.
 You begin to convince them to help you come up with a plan to break into the bank. As long as they get something out of it too they will help. A plan has been devised.
-You will be breaking into th bank vault that night.
+You will be breaking into th bank vault that night. One of your new friends tells you the combination to get into the vault. 
+You enter the combination into your remote to look at later.
                     """,
 
     #the_end()
