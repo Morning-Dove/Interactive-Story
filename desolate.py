@@ -1,5 +1,5 @@
 import sys
-from colorama import Fore, Style
+from colorama import Fore, Style, init
 from interface import Interface
 import desolate_decisions
 
@@ -129,6 +129,7 @@ class Desolate(Interface):
 
 
     def next_era(self):
+        init(autoreset=True)
         next_world = """You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
