@@ -1,4 +1,5 @@
 import sys
+from colorama import Fore, Style
 from interface import Interface
 import cowboy_decisions
 
@@ -107,17 +108,20 @@ class Cowboy(Interface):
             self.wrong_choice() 
 
     def fully_charged(self):
-        print("""You have made it to the charging port. 
+
+        next_world = """You have made it to the charging port. 
 You plug-in the remote to start charging.
 You are not totally sure of where you are going next.
 The remote charges quickly. You are off to your next destination!
               
 ________________________________NEW_WORLD________________________________________
-              """)
+              """
+        print(Fore.CYAN + Style.BRIGHT + next_world)
 
 
     def the_end(self):
-        print("You don't make it to the charging port. You never make it out of this world.")
+        print_statement = "You don't make it to the charging port. You never make it out of this world." 
+        print(Fore.LIGHTMAGENTA_EX + Style.BRIGHT + print_statement)
         sys.exit(0)
 
 cowboy = Cowboy()

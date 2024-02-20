@@ -40,25 +40,23 @@ hopefully make it to another place that it will be easier to survive in.
                 """,
 
     #Goes to decision15 & decision16
-    "decision6" : f"""You have decided to continue walking through the night. 
+    "decision6" : """You have decided to continue walking through the night. 
 The remote GPS is pointing you towards the mountain. You begin making the dangerous and trecherous walk to continue your travels. 
 You are grateful there is a full moon tonight and you are able to walk in the brightly lit starry night sky. 
 Since you had to light the remote up so many times you notice the battery is draining faster than you expected.
 
 Do you go out looking for supplies? or Do you continue on your journey of following the map to find a charging port?
-
-By early morning the remote battery is down to: """,
+                """,
 
     #Goes to decision8 & player_dies()
-    "decision7" : f"""You are waiting until the sun comes up to see how badly you are injured.
+    "decision7" : """You are waiting until the sun comes up to see how badly you are injured.
 When the sun rises you realize your arm has been seriously burned in the fire.
 You are on the lookout for water and plants that could help soothe your burn.
 You continue following the map on your remote while also checking revines and gullys for water.
 You are now about 1 days walk away from the charging port.
 
 Do you walk through the night to the charging port? or Do you stop and make camp for one more night? 
-
-The remote battery is: """,
+                 """,
 
     #Goes to next_era() & decision17
     "decision8" : """You continue walking through the night. Luckily it is a full moon and clear skies.
