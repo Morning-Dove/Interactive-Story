@@ -18,10 +18,10 @@ You decide you do not want to stay here long. You check the map to find out how 
 
     #Goes to decision16
     "decision3" : """You jumped out from behind the counter yelling don't shoot. What do you think is going to happen? There is a shoot out and you yell. 
-You have officially brought your voice to a gun fight. No one knows who you are in this small owboy town. So they all turn on you.""",
+You have officially brought your voice to a gun fight. No one knows who you are in this small cowboy town. So they all turn on you.""",
     
     #Goes to decision5 & decision6
-    "decision4" : """You are in luck there is a charging port not far from here. It is only about a days walk from here.
+    "decision4" : """You are in luck there is a charging port not far from here. It is only a few buildings down from from here.
 You begin to casually walk out from behind the bar. When someone tells you to stop and get them a drink. 
 You realize they think you are the bartender.
 
@@ -37,7 +37,7 @@ You tell them about how you are just passing through and you wouldn't be in town
 
     #the_end()
     "decision6" : """Tell them you just quit your job. They start yelling and getting upset at you for trying to walk out. 
-You don't make it very far out of the Saloon before someone stops to ask who you are.
+You don't make it very far out of the saloon before someone stops to ask who you are.
 They mention how they have never seen you before and hadn't heard about anyone new coming into town.
 They begin questioning the first story you told them. They are afraid you are trying to come and do harm within their town. 
 You try to explain to them that is not what is happening, but it is to late. They pull a gun on you... bang. bang. 
@@ -110,7 +110,8 @@ There is no way you will be making it out of here.
                     """,
 
     #fully_charged()
-    "decision18" : """You think this will be the end? Well you are in luck. Everyone turns out to be really nice. 
+    "decision18" : """You think this will be the end? Well you are in luck. 
+Everyone turns out to be really nice. 
 You are surprised that it went from a shoot out to this! 
 You check your map and explain to everyone that you are a world traveller and need to get into their bank to use the charging port.
 Oddly enough everyone knows exactly what you are talking about. They have previously had other worldly travellers. 
