@@ -124,8 +124,9 @@ Once it is cool enough to start moving agian, you stay in your head thinking abo
 You fall into a gully carved out by torrential down pours of rain. When you fall into the gully you break your leg.
                             """,
 
-        #player_dies()
-        "decision15" : """You went out looking for supplies. 
+        #Goes to decision18
+        "decision15" : """You went out looking for supplies. You find some broken pottery and fishing line. 
+You hold onto it for now just in case to use it later.
 You get lost and end up an extra day worth of travel away from the charging port. 
                         """,
 
@@ -139,5 +140,10 @@ You are giddy with excitement!
         "decision17" : """The plant you thought was aloe vera turned out to be Aloe ruspoliana.
 A poisonous plant that looks similar to Aloe vera. 
 You start to become extremely ill while preparing a fire and waiting for your water to boil. 
-You pass out. When you wake up..."""
+You pass out. When you wake up...
+                        """,
+
+        #player_dies()
+        "decision18" : """You get lost and end up an extra day worth of travel away from the charging port.
+You try to use what ever you have in your inventory to survive and continue pushing to the charging port."""
 }
