@@ -67,6 +67,3 @@ vault = Vault()
 
 
 vault.navigate_vents()
-
-    
-
