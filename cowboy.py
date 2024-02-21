@@ -153,7 +153,7 @@ Either way you knnw nothing will be the same.......
               
 ________________________________THE_END________________________________________""","36")
         print()
-       
+        sys.exit(0) 
 
 
     def the_end(self):
