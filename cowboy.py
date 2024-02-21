@@ -2,7 +2,6 @@ import sys
 from colorama import Fore, Style, init
 from interface import Interface
 import cowboy_decisions
-from time import sleep
 
 class Cowboy(Interface):
 
@@ -146,11 +145,13 @@ Remember this combination it as this is the only time you will see it.""", "32")
     def fully_charged(self):
         print()
         Interface.print_color("""You have made it to the charging port. 
-You plug-in the remote to start charging.
-You are not totally sure of where you are going next.
-The remote charges quickly. You are off to your next destination!
+You plug-in the remote to start charging. The remote charges quickly.
+You have learned how to operate the remote and are trying to decide where to go to next.
+You are unsure of what you would like to do. Maybe you will continue to travel and time hop?
+Maybe you will go back to your original world and try to pretend like nothing has happened.
+Either way you knnw nothing will be the same.......        
               
-________________________________NEW_WORLD________________________________________""","36")
+________________________________THE_END________________________________________""","36")
         print()
        
 
