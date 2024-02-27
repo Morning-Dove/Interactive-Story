@@ -2,9 +2,9 @@
 
 ## Player
 
-**Furture**
+**Future**
 
-* 
+ * imports from interface.py
 
 **Desolate**
 
@@ -14,10 +14,6 @@
 **Cowboy**
  * imports from interface.py
  * imports from cowboy_decisions.py
-
-**Wizard**
-
-*
 
 **Interface**
 
